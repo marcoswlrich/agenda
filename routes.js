@@ -1,13 +1,12 @@
 const express = require('express')
 const route = express.Router()
 const homeController = require('./src/controllers/homeController')
-const contatoController = require('./src/controllers/contatoController')
+const loginController = require('./src/controllers/loginController')
 
 // rotas da home
-route.get('/', homeController.home)
-route.post('/', homeController.trataPost)
+route.get('/', homeController.index)
 
-//rotas contato
-route.get('/contato', contatoController.contato)
+// rotas de login
+route.get('/login', loginController.index)
 
 module.exports = route
