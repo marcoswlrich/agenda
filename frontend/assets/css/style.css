@@ -14,7 +14,9 @@
 
 body {
   font-family: 'Fira Sans', sans-serif;
+  /* background-color: #514869; */
   /* background: var(--ligth); */
+  background-color: #201b2c;
 }
 
 /* NAV AGENDA */
@@ -24,12 +26,13 @@ header {
   align-items: center;
   padding: 18px 5%;
   background-color: var(--dark);
+  border-bottom: 1px solid #514869;
 }
 
 .logo {
   cursor: pointer;
   margin-right: auto;
-  color: var(--ligth);
+  color: rgba(0, 255, 136, 1.5);
   font-weight: 600;
 }
 
@@ -56,21 +59,25 @@ button {
 }
 
 .nav_links li a:hover {
-  color: var(--primary-color);
+  color: rgba(0, 255, 136, 1);
 }
 
 button {
   padding: 9px 25px;
   margin-left: 20px;
-  background-color: rgba(140, 56, 255, 1);
+  background-color: rgba(0, 255, 136, 1);
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  font-weight: 400;
+  color: #2b134b;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
 button:hover {
-  background-color: rgba(140, 56, 255, 0.8);
+  background-color: rgba(0, 230, 122, 0.8);
+  color: var(--ligth);
 }
 
 .container {
@@ -78,20 +85,20 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   justify-content: center;
-  height: 300px;
-  margin-top: 20px;
+  height: 100%;
+  /* margin-top: 20px; */
 }
 
 .titulo-descrition {
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .titulo-descrition h1 {
-  color: var(--dark);
+  color: rgba(0, 255, 136, 1.5);
   font-size: 40px;
   font-weight: 500;
 }
@@ -99,11 +106,13 @@ button:hover {
 .titulo-descrition p {
   padding: 10px;
   font-size: 20px;
+  color: rgba(0, 255, 136, 1.5);
 }
 
 .error {
   width: 70%;
-  background-color: #ffb4a2;
+  background-color: #514869;
+  color: var(--ligth);
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -114,7 +123,7 @@ button:hover {
 .tabel thead th {
   position: sticky;
   top: 0;
-  background-color: var(--dark);
+  background-color: #202024;
   color: var(--ligth);
   font-size: 15px;
   font-weight: 600;
@@ -123,7 +132,7 @@ button:hover {
 
 table {
   border-collapse: collapse;
-  box-shadow: 0 5px 10px gray;
+  box-shadow: 0 10px 40px #00000056;
 }
 
 th,
@@ -141,7 +150,7 @@ tr:nth-child(odd) {
 }
 
 tr:hover td {
-  color: #b5179e;
+  color: #514869;
   cursor: pointer;
   background-color: #ffffff;
 }
