@@ -26,7 +26,7 @@ header {
   background-color: var(--dark);
 }
 
-h1 {
+.logo {
   cursor: pointer;
   margin-right: auto;
   color: var(--ligth);
@@ -73,37 +73,45 @@ button:hover {
   background-color: rgba(140, 56, 255, 0.8);
 }
 
-.description h1,
-p {
-  display: grid;
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   justify-content: center;
-
+  height: 300px;
   margin-top: 20px;
 }
 
-.description h1 {
+.titulo-descrition {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titulo-descrition h1 {
   color: var(--dark);
   font-size: 40px;
   font-weight: 500;
 }
 
-.description p {
+.titulo-descrition p {
+  padding: 10px;
   font-size: 20px;
 }
 
-/* Tabela agenda */
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 300px;
-  overflow: auto;
-  margin-top: 30px;
-
-  /* border: 1px solid #dddddd; */
+.error {
+  width: 70%;
+  background-color: #ffb4a2;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.container thead th {
+/* Tabela agenda */
+
+.tabel thead th {
   position: sticky;
   top: 0;
   background-color: var(--dark);
@@ -140,19 +148,4 @@ tr:hover td {
 
 ::-webkit-scrollbar {
   width: 6px;
-}
-
-.error {
-  background-color: #ffb4a2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 800px;
-  height: 100px;
-  padding: 10px 0 20px 0;
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20%;
 }
