@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 
 const LoginSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  userName: { type: String, required: true },
   email: { type: String, required: true },
   senha: { type: String, required: true }
 })
@@ -16,9 +16,15 @@ class Login {
     this.user = null
   }
 
-  register() {
+  async register() {
     this.validar()
     if (this.errors.length > 0) return
+
+    try {
+      this.user = await LoginModel.create(this.body)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   validar() {
