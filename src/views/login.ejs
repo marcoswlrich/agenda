@@ -8,13 +8,29 @@
       <form action="/login/log" method="post" class="sign-in-form">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
         <h2 class="title">Faça seu login</h2>
+        <% if(errors.length > 0) { %> <% errors.forEach(function(error) { %>
+        <div
+          class="alert alert-warning alert-dismissible fade show"
+          role="alert"
+        >
+          <%= error %>
+        </div>
+        <% }) %> <% } %> <% if(success.length > 0) { %> <%
+        success.forEach(function(success) { %>
+        <div
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          <%= success %>
+        </div>
+        <% }) %> <% } %>
         <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
+          <i class="fas fa-at"></i>
+          <input type="text" name="email" placeholder="Email" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Senha" />
+          <input type="password" name="password" placeholder="Senha" />
         </div>
         <input type="submit" value="Entrar" class="btn solid" />
         <p class="social-text">Or Sign in with social platforms</p>

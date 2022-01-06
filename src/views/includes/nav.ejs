@@ -3,8 +3,12 @@
   <nav>
     <ul class="nav_links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Contato</a></li>
+      <li><a href="/contato">cadastrar contatos</a></li>
     </ul>
   </nav>
-  <a class="cta" href="#"><button>entrar</button></a>
+  <% if(user) { %>
+  <a class="cta" href="/login/logout"><button>Sair</button></a>
+  <% } else {%>
+  <a class="cta" href="/login"><button>Entrar</button></a>
+  <% } %>
 </header>
