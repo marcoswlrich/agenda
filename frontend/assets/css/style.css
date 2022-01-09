@@ -551,7 +551,7 @@ form.sign-in-form {
 }
 
 .container-contato {
-  margin-top: 20px;
+  margin-top: 50px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -559,6 +559,30 @@ form.sign-in-form {
   justify-content: center;
   align-items: center;
 }
+
+.titulo-contato {
+  margin-top: 20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.titulo-contato h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.titulo-contato p {
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
 .contato {
   width: 100vw;
   height: 100vh;
@@ -620,4 +644,16 @@ form.sign-in-form {
   font-weight: 700;
   letter-spacing: 3px;
   color: #2b134b;
+}
+
+.error-contato {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #514869;
+  margin-bottom: 20px;
+  color: #fff;
 }

@@ -20,10 +20,17 @@
   <a class="cta" href="#"><button>entrar</button></a>
 </header> -->
 <section class="container-contato">
-  <div class="titulo-descrition">
+  <div class="titulo-contato">
     <h1>Contato</h1>
     <p>Crie ou edite o seu contato abaixo.</p>
   </div>
+
+  <% if(errors.length > 0) { %> <% errors.forEach(function(error) { %>
+  <div class="error-contato" role="alert"><%= error %></div>
+  <% }) %> <% } %> <% if(success.length > 0) { %> <%
+  success.forEach(function(success) { %>
+  <div class="error-contato" role="alert"><%= success %></div>
+  <% }) %> <% } %>
 
   <div class="contato">
     <form action="/contato/register" method="post" class="card-contato">

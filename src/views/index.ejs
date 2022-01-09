@@ -25,9 +25,12 @@
     <p>Abaixo estão todos os seus contatos.</p>
   </div>
 
-  <div class="error">
-    <p>Mensagem de erro</p>
-  </div>
+  <% if(errors.length > 0) { %> <% errors.forEach(function(error) { %>
+  <div class="error" role="alert"><%= error %></div>
+  <% }) %> <% } %> <% if(success.length > 0) { %> <%
+  success.forEach(function(success) { %>
+  <div class="error" role="alert"><%= success %></div>
+  <% }) %> <% } %>
 
   <table class="tabel">
     <thead>
