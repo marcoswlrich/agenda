@@ -37,19 +37,19 @@
       <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
       <div class="textfield">
         <label>Nome</label>
-        <input type="text" name="nome" />
+        <input value="<%= contato.nome %>" type="text" name="nome" />
       </div>
       <div class="textfield">
         <label>Sobrenome</label>
-        <input type="text" name="sobrenome" />
+        <input value="<%= contato.sobrenome %>" type="text" name="sobrenome" />
       </div>
       <div class="textfield">
         <label>Email</label>
-        <input type="email" name="email" />
+        <input value="<%= contato.email %>" type="email" name="email" />
       </div>
       <div class="textfield">
         <label>Telefone</label>
-        <input type="tel" name="telefone" />
+        <input value="<%= contato.telefone %>" type="tel" name="telefone" />
       </div>
       <button class="btn-contato" type="submit">Adicionar</button>
     </form>
