@@ -1,0 +1,56 @@
+<%- include('includes/head') %> <%- include('includes/nav') %>
+
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+  </head>
+  <body> -->
+<!-- <header class="container-nav">
+  <h1>Agenda</h1>
+  <nav>
+    <ul class="nav_links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+  <a class="cta" href="#"><button>entrar</button></a>
+</header> -->
+<section class="container-contato">
+  <div class="titulo-descrition">
+    <h1>Contato</h1>
+    <p>Crie ou edite o seu contato abaixo.</p>
+  </div>
+
+  <div class="contato">
+    <form action="/contato/register" method="post" class="card-contato">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+      <div class="textfield">
+        <label>Nome</label>
+        <input type="text" name="nome" />
+      </div>
+      <div class="textfield">
+        <label>Sobrenome</label>
+        <input type="text" name="sobrenome" />
+      </div>
+      <div class="textfield">
+        <label>Email</label>
+        <input type="email" name="email" />
+      </div>
+      <div class="textfield">
+        <label>Telefone</label>
+        <input type="tel" name="telefone" />
+      </div>
+      <button class="btn-contato" type="submit">Adicionar</button>
+    </form>
+  </div>
+</section>
+<!-- 
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+</html> -->
+
+<%- include('includes/footer') %>
