@@ -30,8 +30,7 @@
   <% }) %> <% } %> <% if(success.length > 0) { %> <%
   success.forEach(function(success) { %>
   <div class="error" role="alert"><%= success %></div>
-  <% }) %> <% } %>
-
+  <% }) %> <% } %> <% if(contatos.length > 0) { %>
   <table class="tabel">
     <thead>
       <tr>
@@ -43,38 +42,25 @@
       </tr>
     </thead>
     <tbody>
+      <% contatos.forEach(contato => { %>
       <tr>
-        <td>Marcos Antonio Pereira Wlrich</td>
-        <td>marcoswlrich</td>
-        <td>marcoswlrich@gmail.com</td>
-        <td>(65)99681-9987</td>
+        <td><%= contato.nome %></td>
+        <td><%= contato.sobrenome %></td>
+        <td><%= contato.email %></td>
+        <td><%= contato.telefone %></td>
         <td>
-          <button>editar</button>
-          <button>excluir</button>
+          <button><a href="/contato/<%= contato._id %>">editar</a></button>
+          <button>
+            <a href="/contato/delete/<%= contato._id %>">excluir</a>
+          </button>
         </td>
       </tr>
-      <tr>
-        <td>Marcos</td>
-        <td>marcoswlrich</td>
-        <td>marcoswlrich@gmail.com</td>
-        <td>(65)99681-9987</td>
-        <td>
-          <button>editar</button>
-          <button>excluir</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Marcos</td>
-        <td>marcoswlrich</td>
-        <td>marcoswlrich@gmail.com</td>
-        <td>(65)99681-9987</td>
-        <td>
-          <button>editar</button>
-          <button>excluir</button>
-        </td>
-      </tr>
+      <% }); %>
     </tbody>
   </table>
+  <% } else { %>
+  <p>Não existe contatos na sua agenda.</p>
+  <% } %>
 </section>
 <!-- 
     <script src="./assets/js/bundle.js"></script>
