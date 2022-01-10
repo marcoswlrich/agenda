@@ -33,7 +33,11 @@
   <% }) %> <% } %>
 
   <div class="contato">
+    <% if(contato._id) {%>
+    <form action="/contato/edit/<%= contato._id%>" method="post" class="card-contato">
+    <% } else {%> 
     <form action="/contato/register" method="post" class="card-contato">
+    <%}%>
       <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
       <div class="textfield">
         <label>Nome</label>
