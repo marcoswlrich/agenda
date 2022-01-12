@@ -252,6 +252,17 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.error-login {
+  color: red;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  top: 57px;
+  position: absolute;
+  justify-content: center;
+  padding: 1px;
+}
+
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;

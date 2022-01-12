@@ -59,8 +59,8 @@ class Login {
       this.errors.push('E-mail inválido!')
 
     // a senha precisa ter entre 3 e 12 caracteres
-    if (this.body.password.length < 3 || this.body.password.length > 12) {
-      this.errors.push('A senha precisa ter entre 3 e 12 caracteres. ')
+    if (this.body.password.length < 6 || this.body.password.length > 12) {
+      this.errors.push('A senha precisa ter entre 6 e 12 caracteres. ')
     }
   }
 

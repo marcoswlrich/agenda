@@ -5,7 +5,7 @@
 <div class="container-login">
   <div class="forms-container">
     <div class="signin-signup">
-      <form action="/login/log" method="post" class="sign-in-form">
+      <form action="/login/log" method="post" class="sign-in-form form-login">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
         <h2 class="title">Faça seu login</h2>
         <% if(errors.length > 0) { %> <% errors.forEach(function(error) { %>
@@ -49,7 +49,11 @@
           </a>
         </div>
       </form>
-      <form action="/login/register" method="post" class="sign-up-form">
+      <form
+        action="/login/register"
+        method="post"
+        class="sign-up-form form-cadastro"
+      >
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
         <h2 class="title">Faça sua inscrição</h2>
 
