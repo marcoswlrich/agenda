@@ -25,14 +25,10 @@
     <p>Você precisa sair para criar outra conta</p>
 
     <% if(errors.length > 0) { %> <% errors.forEach(function(error) { %>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <%= error %>
-    </div>
+    <div class="error-log" role="alert"><%= error %></div>
     <% }) %> <% } %> <% if(success.length > 0) { %> <%
     success.forEach(function(success) { %>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <%= success %>
-    </div>
+    <div class="error-log" role="alert"><%= success %></div>
     <% }) %> <% } %>
   </div>
 </section>
