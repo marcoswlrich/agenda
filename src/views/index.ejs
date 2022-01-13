@@ -49,9 +49,13 @@
         <td><%= contato.email %></td>
         <td><%= contato.telefone %></td>
         <td>
-          <button><a href="/contato/<%= contato._id %>">editar</a></button>
           <button>
-            <a href="/contato/delete/<%= contato._id %>">excluir</a>
+            <a class="editar" href="/contato/<%= contato._id %>">editar</a>
+          </button>
+          <button>
+            <a class="excluir" href="/contato/delete/<%= contato._id %>"
+              >excluir</a
+            >
           </button>
         </td>
       </tr>

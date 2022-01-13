@@ -80,6 +80,14 @@ button:hover {
   color: var(--ligth);
 }
 
+.editar {
+  color: #2b134b;
+}
+
+.excluir {
+  color: #2b134b;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -680,4 +688,15 @@ form.sign-in-form {
   background-color: #514869;
   margin-bottom: 20px;
   color: #fff;
+}
+
+.error-cont {
+  color: red;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  top: 57px;
+  position: absolute;
+  justify-content: center;
+  padding: 1px;
 }

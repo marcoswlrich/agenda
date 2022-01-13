@@ -1,24 +1,4 @@
 <%- include('includes/head') %> <%- include('includes/nav') %>
-
-<!-- <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modelo</title>
-  </head>
-  <body> -->
-<!-- <header class="container-nav">
-  <h1>Agenda</h1>
-  <nav>
-    <ul class="nav_links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-  <a class="cta" href="#"><button>entrar</button></a>
-</header> -->
 <section class="container-contato">
   <div class="titulo-contato">
     <h1>Contato</h1>
@@ -34,34 +14,31 @@
 
   <div class="contato">
     <% if(contato._id) {%>
-    <form action="/contato/edit/<%= contato._id%>" method="post" class="card-contato">
+    <form action="/contato/edit/<%= contato._id%>" method="post" class="card-contato form-contato">
     <% } else {%> 
-    <form action="/contato/register" method="post" class="card-contato">
+    <form action="/contato/register" method="post" class="card-contato form-contato">
     <%}%>
       <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
       <div class="textfield">
-        <label>Nome</label>
-        <input value="<%= contato.nome %>" type="text" name="nome" />
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" class="nome" value="<%= contato.nome %>"  />
       </div>
       <div class="textfield">
-        <label>Sobrenome</label>
+        <label for="sobrenome">Sobrenome</label>
         <input value="<%= contato.sobrenome %>" type="text" name="sobrenome" />
       </div>
       <div class="textfield">
-        <label>Email</label>
-        <input value="<%= contato.email %>" type="email" name="email" />
+        <label for="email">Email</label>
+        <input type="email" name="email" class="email" value="<%= contato.email %>"  />
       </div>
       <div class="textfield">
-        <label>Telefone</label>
-        <input value="<%= contato.telefone %>" type="tel" name="telefone" />
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" class="telefone" value="<%= contato.telefone %>"  />
       </div>
       <button class="btn-contato" type="submit">Adicionar</button>
     </form>
   </div>
 </section>
-<!-- 
-    <script src="./assets/js/bundle.js"></script>
-  </body>
-</html> -->
+
 
 <%- include('includes/footer') %>

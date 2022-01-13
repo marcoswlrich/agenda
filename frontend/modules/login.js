@@ -1,5 +1,4 @@
-// import validator from 'validator'
-const validator = require('validator')
+import validator from 'validator'
 
 export default class Login {
   constructor(formClass) {
